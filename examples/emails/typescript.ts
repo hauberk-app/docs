@@ -1,6 +1,6 @@
 import { Hauberk } from '@hauberk/node';
 
-const hauberk = new Hauberk('hk_123456789'); // Defaults to: .env HAUBERK_API_KEY
+const hauberk = new Hauberk('hk_123456789'); // Defaults to: .env HAUBERK_API_KEY test
 
 (async function() {
   const { data, error } = await hauberk.emails.send({
