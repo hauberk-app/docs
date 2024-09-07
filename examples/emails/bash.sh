@@ -1,4 +1,4 @@
-curl -X POST 'https://api.hauberk.app/email' \
+curl -X POST 'https://api.hauberk.app/emails' \
   -H 'Authorization: Bearer: hk_123456789' \
   -H 'Content-Type: application/json' \
   -d $'{
