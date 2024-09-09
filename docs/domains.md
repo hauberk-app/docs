@@ -6,6 +6,8 @@ To verify a domain, you must configure DNS records granting us permission to sen
 
 Need help configuring DNS? Contact us at [team@hauberk.app](mailto:team@hauberk.app)
 
-## 
+## Creating a Domain
+
+Go to [/domains/new](/domains/new)
 
 
