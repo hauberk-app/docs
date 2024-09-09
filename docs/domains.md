@@ -10,16 +10,14 @@ Need help configuring DNS? Contact us at [team@hauberk.app](mailto:team@hauberk.
 
 Go to [hauberk.app/domains/new](/domains/new)
 
-### Region
+**Region:** select the region closest to the majority of your users
 
-Select the region closest to the majority of your users
-
-### Domain
-
-We recommend choosing a subdomain that corresponds to the type of emails you will be sending. On the Pro plan you can create as many domains as you need.
+**Domain:** We recommend choosing a subdomain that corresponds to the type of emails you will be sending. On the Pro plan you can create as many domains as you need.
 
 For example: use `auth.yourdomain.com` for sending password reset emails, use `updates.yourdomain.com` for sending monthly account statements.
 
 ## Verify DNS records
 
 Verifying DNS records requires adding the Hauberk-generated records to your DNS provider. Adding these DNS records to your provider authorizes Hauberk to send email using your provided domain name.
+
+
