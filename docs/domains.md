@@ -8,6 +8,9 @@ Need help configuring DNS? Contact us at [team@hauberk.app](mailto:team@hauberk.
 
 ## Creating a Domain
 
-Go to [/domains/new](/domains/new)
+Go to [hauberk.app/domains/new](/domains/new)
+
+Region: select the region closest to the majority of your users
+Domain: we recommend choosing a subdomain that corresponds to the type of emails you will be sending. On the Pro plan you can create as many domains as you need.
 
 
