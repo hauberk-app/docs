@@ -27,7 +27,7 @@ Verifying DNS records requires adding the Hauberk-generated records to your DNS 
 
 ### DNS Records
 
-**MX:** A MX (Mail Exchange) record accepts inbound email. Hauberk generates two MX records: `feedback-smpt` for receiving email events like bounces and clicks, and `inbound-smtp` for [processing inbound email](/inbound-email.md) sent to your domain. [Learn more about MX records](/docs/dns/mx-mail-exchange)
+**MX:** A MX (Mail Exchange) record accepts inbound email. Hauberk generates two MX records: `feedback-smtp` for receiving email events like bounces and clicks, and `inbound-smtp` for [processing inbound email](/inbound-email.md) sent to your domain. [Learn more about MX records](/docs/dns/mx-mail-exchange)
 
 **TXT:** TXT (Text) records are checked by recipient email providers to verify the authenticity of the emails you send. Hauberk generates three TXT records: a SPF record, a DKIM/DomainKey record, and a DMARC record. [Learn more about TXT records](/docs/dns/txt)
 
@@ -49,6 +49,11 @@ Add a domain to Hauberk with Cloudflare as your DNS provider.
 
 Login to your [Cloudflare account](https://dash.cloudflare.com) and go to the DNS records for your domain.
 
+1. Add the **MX Record (feedback-smtp)** to Cloudflare
+2. Add the **SPF TXT Record** to Cloudflare
+3. Add the **DKIM/DomainKey TXT Record** to Cloudflare
+4. Add the **DMARC TXT Record** to Cloudflare (you may or may not already have a DMARC record)
+5. (Recommended) Add the **MX Record (inbound-smtp)** to Cloudflare. Adding this record allows Hauberk to route your inbound email in one of three ways: transparently proxy email to and from your personal inbox, provide a shared team inbox on Hauberk, or send your app webhooks for each inbound message with it's contents. [Learn more about inbound email processing](/docs/inbound-email)
 
 
 
