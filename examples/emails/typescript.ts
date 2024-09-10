@@ -6,9 +6,9 @@ const hauberk = new Hauberk('hk_123456789');
 (async function() {
   /**
    * @returns { 
-   *   success: boolean; 
+   *   success: boolean, 
    *   data?: { messageId: string; },
-   *   error?: string;
+   *   error?: { code: string; message: string; },
    *   statusCode: number
    * } 
    */
