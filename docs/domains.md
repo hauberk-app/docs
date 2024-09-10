@@ -21,9 +21,21 @@ Need help configuring DNS? Contact us at [team@hauberk.app](mailto:team@hauberk.
 
 For example: use `auth.yourdomain.com` for sending password reset emails, use `updates.yourdomain.com` for sending monthly account statements.
 
-## 2. Verify DNS records
+## 2. Verify DNS Records
 
 Verifying DNS records requires adding the Hauberk-generated records to your DNS provider. Adding these DNS records to your provider authorizes Hauberk to send email using your provided domain name.
+
+### DNS Records
+
+**MX:** A MX (Mail Exchange) record accepts inbound email. Hauberk generates two MX records: `feedback-smpt` for receiving email events like bounces and clicks, and `inbound-smtp` for [processing inbound email](/inbound-email.md) sent to your domain. [Learn more about MX records](/docs/dns/mx-mail-exchange)
+
+**TXT:** TXT (Text) records are checked by recipient email providers to verify the authenticity of the emails you send. Hauberk generates three TXT records: a SPF record, a DKIM/DomainKey record, and a DMARC record. [Learn more about TXT records](/docs/dns/txt)
+
+**SPF:** A SPF (TXT) record tells a receiving email provider what hostnames and/or IP addresses are authorized to send email on behalf of the domain. [Learn more about SPF](/docs/dns/spf-sender-policy-framework)
+
+**DKIM/DomainKey:** Hauberk cryptographically signs all email we send on your behalf with a private key,  DKIM/DomainKey (TXT) record contains the public key that a receiving email provider uses to confirm the cryptographic signature. [Learn more about DKIM](/docs/dns/dkim-domainkeys-identified-email)
+
+**DMARC:** A DMARC record instructs a receiving email provider how to handle an email that does not pass authentication (not sent from an approved hostname/IP address, or has an invalid cryptographic signature). [Learn more about DMARC](/docs/dns/dmarc-domain-based-messge-authentication-reporting-conformance)
 
 ### DNS Providers
 
@@ -36,6 +48,7 @@ Add a domain to Hauberk with Cloudflare as your DNS provider.
 #### Login to CLoudflare
 
 Login to your [Cloudflare account](https://dash.cloudflare.com) and go to the DNS records for your domain.
+
 
 
 
