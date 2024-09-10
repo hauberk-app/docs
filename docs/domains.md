@@ -16,10 +16,10 @@ Need help configuring DNS? Contact us at [team@hauberk.app](mailto:team@hauberk.
 
 *On the Pro plan you can create as many domains as you need.*
 
-> Best practice is to use a subdomain to segment your reputation based on topic or purpose. (For example: auth.example.com - transaction email, hello.example.com - marketing email)
+> Best practice is to use a subdomain to segment your reputation based on topic or purpose. (For example: use `auth.yourdomain.com` for sending password reset emails, use `updates.yourdomain.com` for sending monthly account statements, and use `hello.yourdomain.com` for marketing emails.)
 
 
-For example: use `auth.yourdomain.com` for sending password reset emails, use `updates.yourdomain.com` for sending monthly account statements.
+
 
 ## 2. Verify DNS Records
 
